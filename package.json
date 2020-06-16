@@ -1,0 +1,25 @@
+{
+  "name": "certificate-maker",
+  "version": "1.0.0",
+  "description": "A web-based certification generator which provides tools to generate certifications for students with a simple user experience.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Asrar Aljuhani",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "gmail-send": "^1.8.10",
+    "node-xlsx": "^0.15.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

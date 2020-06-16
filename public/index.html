@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="https://img.icons8.com/nolan/64/blog.png">
+  <script src="https://kit.fontawesome.com/107c424bca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Certificate Maker</title>
+</head>
+
+<body class="container">
+
+  <nav class="navbar">
+    <span class="h1">Certificate Maker</span>
+    <h6>Made with <i class="fas fa-heart"></i> by Asrar</h6>
+  </nav>
+  <div id="makerInfo">    
+   <h6> You can contact me on <i class="fab fa-twitter"><a href="https://twitter.com/asraraljuhani">AsrarAljuhani</a></i> </h6>
+  </div>
+  <div class="container ">
+    <div class="d-flex flex-row bd-highlight mb-3 container justify-content-md-center" id="control">
+      <div class="row justify-content-md-center">
+        <div class="col">
+          <p>Upload the certificate template</p>
+
+          <div class="input-group mb-3 p-2 bd-highlight">
+            <input class="btn form-control" id="upload" type="file" accept='.jpg,.png' onChange="handleImageUpload()" placeholder="" aria-label="" aria-describedby="button-addon2" />
+          </div>
+        </div>
+        <div class="col">
+          <p>Custom your font</p>
+          <div class="p-2 bd-highlight">
+            <input class="btn form-control" type="color" value="#000000" id="colorWell">
+          </div>
+
+          <div class="p-1 bd-highlight" style="margin-left:12px;">
+            <button class="btn" type="button" onClick="sizeI()"><i class="fas fa-plus"></i></button>
+            <button class="btn" type="button" onClick="sizeD()"><i class="fas fa-minus"></i></button>
+            <button class="btn" type="button" onClick="left()"><i class="fas fa-arrow-left"></i></button>
+            <button class="btn" type="button" onClick="right()"><i class="fas fa-arrow-right"></i></button>
+            <button class="btn" type="button" onClick="up()"><i class="fas fa-arrow-up"></i></button>
+            <button class="btn" type="button" onClick="down()"><i class="fas fa-arrow-down"></i></button>
+          </div>
+        </div>
+        <div class="col">
+          <p>Enter the name/names on certificate</p>
+          <fieldset class="form-group">
+            <div class="row">
+              <div class="col-sm-10">
+                <textarea id="names" class="textarea-names" rows="3" onChange="addNames()" placeholder="Every name on a new line"></textarea>
+                <p>Save your certificate </p>
+                <div class="p-2 bd-highlight">
+                  <button id="save-btn" type="button" class="btn btn-outline-dark" onClick="saveZip()">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <div class="container">
+          <div class="">
+            <canvas id="canvas" dir="rtl" ></canvas>
+          </div>
+        </div>
+      </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+        <script src="jszip.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="app.js" charset="utf-8"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
